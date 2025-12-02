@@ -42,20 +42,14 @@ const ContactSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl px-4 flex flex-col items-center justify-center gap-8 md:gap-12">
+      <div className="relative z-10 w-full max-w-6xl px-4 flex flex-col items-center justify-center gap-6 md:gap-12">
         
-        <motion.div 
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 font-serif">Get in Touch</h2>
+        <div className="text-center">
+          <h2 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 font-serif">Get in Touch</h2>
           <p className="text-base md:text-xl text-white/80 max-w-2xl mx-auto px-4">
             Ready to start your custom project? Reach out to us through any of these platforms.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 w-full max-w-sm md:max-w-full">
           {contactMethods.map((method, index) => (
@@ -70,9 +64,9 @@ const ContactSection = () => {
                 transition: { duration: 0.2, delay: 0 }
               }}
               transition={{ duration: 0.2 }}
-              className={`flex flex-col items-center justify-center p-6 md:p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group ${method.color}`}
+              className={`flex flex-col items-center justify-center p-4 md:p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group ${method.color}`}
             >
-              <div className="w-24 h-24 md:w-32 md:h-32 mb-4 md:mb-6 relative">
+              <div className="w-16 h-16 md:w-32 md:h-32 mb-4 md:mb-6 relative">
                  <img 
                    src={method.icon} 
                    alt={method.label} 

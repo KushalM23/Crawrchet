@@ -29,13 +29,13 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full max-w-2xl md:max-w-4xl object-contain -mb-8 md:-mb-12"
+          className="w-4/5 max-w-2xl md:max-w-4xl object-contain -mb-8 md:-mb-12"
         />
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-2xl md:text-4xl text-crawrchet-bg italic font-serif mt-0"
+          className="text-xl md:text-4xl text-crawrchet-bg italic font-serif mt-0"
         >
           Ft. Smirah
         </motion.p>
@@ -54,7 +54,7 @@ const HeroSection = () => {
         }}
         onClick={handleScrollDown}
       >
-        <img src={arrow} alt="Scroll Down" className="w-12 h-12 md:w-16 md:h-16 object-contain rotate-90" />
+        <img src={arrow} alt="Scroll Down" className="w-10 h-10 md:w-16 md:h-16 object-contain rotate-90" />
       </motion.div>
     </section>
   );

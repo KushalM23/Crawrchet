@@ -67,11 +67,7 @@ const ProjectSection = ({ project, position = 'bottom-right' }) => {
 
       {/* Grid Container */}
       <motion.div 
-        className="absolute inset-0 z-20 grid grid-cols-3 grid-rows-3 w-full h-full pointer-events-none gap-4 p-4 md:p-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        className="absolute inset-0 z-20 grid grid-cols-3 grid-rows-3 w-full h-full pointer-events-none gap-2 md:gap-4 p-2 md:p-12"
       >
         {gridItems.map((item, index) => (
           <div 
@@ -109,15 +105,16 @@ const ProjectSection = ({ project, position = 'bottom-right' }) => {
                 className={clsx(
                   "bg-white/90 backdrop-blur-sm rounded-xl shadow-xl cursor-pointer border border-crawrchet-neutral",
                   "flex flex-col justify-center items-center text-center pointer-events-auto transition-all duration-300 ease-in-out",
-                  isExpanded ? "w-full h-full p-4 md:p-6" : "w-48 h-32 md:w-64 md:h-40 p-4 hover:scale-105"
+                  isExpanded ? "w-full h-full p-4 md:p-6" : "w-40 h-28 md:w-64 md:h-40 p-4 hover:scale-105"
                 )}
                 onMouseEnter={handleCardEnter}
+                onClick={handleCardEnter}
               >
                 <motion.h3 
                   layout="position"
                   className={clsx(
                     "font-bold font-serif text-crawrchet-text transition-all duration-300",
-                    isExpanded ? "text-xl md:text-2xl mb-2" : "text-lg md:text-xl"
+                    isExpanded ? "text-xl md:text-2xl mb-2" : "text-base md:text-xl"
                   )}
                 >
                   {project.title}
